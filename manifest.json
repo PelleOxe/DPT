@@ -1,0 +1,18 @@
+{
+  "short_name": "PWA Device &",
+  "name": "PWA Device & Platform Tester",
+  "description": "A comprehensive PWA simulation and testing utility for previewing web applications across various iOS, Android, and tablet device templates with responsive controls and light/dark theme options.",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "display": "standalone",
+  "orientation": "any"
+}

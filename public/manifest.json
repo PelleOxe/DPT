@@ -1,0 +1,18 @@
+{
+  "short_name": "DeviceTester",
+  "name": "PWA Device & Platform Tester",
+  "description": "Simulera och testa dina PWA-appar på iPhone, iPad, Samsung och Lenovo",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0f172a",
+  "theme_color": "#4f46e5",
+  "display": "standalone",
+  "orientation": "any"
+}
