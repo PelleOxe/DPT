@@ -39,6 +39,10 @@ const DEFAULT_STARTER_HTML = `<!DOCTYPE html>
 </body>
 </html>`;
 const VERSION_HISTORY = [{
+  version: 'v0.9.02',
+  date: '2026-07-21',
+  changes: ['Lagt till ny app-ikon och favicon baserad på bifogad surfplattebild.', 'Uppdaterat appens header med den nya surfplatte-ikonen uppe till vänster.', 'Höjt versionsnumret till v0.9.02 i enlighet med versionspolicyn.']
+}, {
   version: 'v0.9.01',
   date: '2026-07-21',
   changes: ['Uppdaterat applikationen till version 0.9.01.', 'Utökat enhetsbiblioteket med omfattande modeller för Apple iPhone/iPad och Samsung Galaxy (upp till 10 år gamla enheter).', 'Lagt till möjlighet att fälla undan hela vänsterpanelen med en expandera/kollapsa-knapp (pilknapp).']
@@ -264,9 +268,10 @@ export default function App() {
       className: "sticky top-0 z-40 bg-white/90 dark:bg-slate-900/50 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 py-3 flex items-center justify-between",
       children: [/*#__PURE__*/_jsxs("div", {
         className: "flex items-center gap-3",
-        children: [/*#__PURE__*/_jsx("div", {
-          className: "w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-600/30",
-          children: "T"
+        children: [/*#__PURE__*/_jsx("img", {
+          src: "/favicon.svg",
+          alt: "PWA Tester Pro Logo",
+          className: "w-8 h-8 rounded-lg shadow-sm object-contain"
         }), /*#__PURE__*/_jsxs("div", {
           className: "flex flex-col",
           children: [/*#__PURE__*/_jsxs("div", {
@@ -276,7 +281,7 @@ export default function App() {
               children: "PWA TESTER PRO"
             }), /*#__PURE__*/_jsx("span", {
               className: "text-[10px] text-slate-500 dark:text-slate-400 font-mono",
-              children: "vers 0.9.01"
+              children: "vers 0.9.02"
             })]
           }), /*#__PURE__*/_jsx("span", {
             className: "text-[11px] text-slate-400 dark:text-slate-500 font-medium",
