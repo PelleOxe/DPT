@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pwadeviceplatformtester-khoboi-cache';
+const CACHE_NAME = 'pwadeviceplatformtester-3scqa8-cache';
 const ASSETS = [
   './',
   './index.html',

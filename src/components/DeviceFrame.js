@@ -64,9 +64,11 @@ export const DeviceFrame = ({
 
       const frameWidth = isLandscape ? device.height : device.width;
       const frameHeight = isLandscape ? device.width : device.height;
+      const isHomeButton = device.notchType === 'home-button';
+      const extraHeight = isHomeButton ? 76 : 0;
       const bezelOffset = device.bezelSize * 2;
       const totalW = frameWidth + bezelOffset;
-      const totalH = frameHeight + bezelOffset;
+      const totalH = frameHeight + bezelOffset + extraHeight;
       const scaleW = (parentWidth - 40) / totalW;
       const scaleH = (parentHeight - 40) / totalH;
       const bestScale = Math.min(scaleW, scaleH, 1); // clamp to max 100%
@@ -94,10 +96,13 @@ export const DeviceFrame = ({
   // Swapped sizes for landscape orientation
   const width = isLandscape ? device.height : device.width;
   const height = isLandscape ? device.width : device.height;
+  const isHomeButton = device.notchType === 'home-button';
+  const topExtraBezel = isHomeButton ? 32 : 0;
+  const bottomExtraBezel = isHomeButton ? 44 : 0;
 
   // Bezel offset layout sizes
   const totalWidth = width + device.bezelSize * 2;
-  const totalHeight = height + device.bezelSize * 2;
+  const totalHeight = height + device.bezelSize * 2 + topExtraBezel + bottomExtraBezel;
   return /*#__PURE__*/_jsxs("div", {
     className: "flex flex-col items-center justify-center w-full min-h-[500px] p-4 select-none",
     children: [/*#__PURE__*/_jsx("div", {
@@ -109,15 +114,22 @@ export const DeviceFrame = ({
         height: totalHeight,
         margin: `${(activeScale - 1) * totalHeight / 2}px 0` // adjust margin so scaled device sits nicely
       },
-      children: /*#__PURE__*/_jsx("div", {
+      children: /*#__PURE__*/_jsxs("div", {
         className: `absolute inset-0 bg-slate-900 dark:bg-slate-950 border-[3px] border-slate-700/80 dark:border-slate-800 shadow-2xl flex flex-col overflow-hidden ${device.borderRadius}`,
         style: {
           padding: `${device.bezelSize}px`
         },
-        children: /*#__PURE__*/_jsxs("div", {
-          className: "relative w-full h-full bg-slate-100 dark:bg-zinc-900 overflow-hidden rounded-[inherit] flex flex-col",
+        children: [isHomeButton && /*#__PURE__*/_jsxs("div", {
+          className: "w-full h-[32px] shrink-0 bg-slate-900 dark:bg-slate-950 flex items-center justify-center relative select-none",
+          children: [/*#__PURE__*/_jsx("div", {
+            className: "w-12 h-1 bg-zinc-800 rounded-full"
+          }), /*#__PURE__*/_jsx("div", {
+            className: "w-2.5 h-2.5 rounded-full bg-indigo-950/80 border border-zinc-800 ml-3"
+          })]
+        }), /*#__PURE__*/_jsxs("div", {
+          className: "relative w-full h-full bg-slate-100 dark:bg-zinc-900 overflow-hidden rounded-[12px] flex flex-col flex-1",
           children: [device.statusBarHeight > 0 && /*#__PURE__*/_jsx("div", {
-            className: `w-full flex items-center justify-between px-6 text-xs select-none z-30 ${device.os === 'ios' ? 'font-sans font-medium text-slate-800 dark:text-slate-100' : 'font-sans text-slate-700 dark:text-slate-300'}`,
+            className: `w-full flex items-center justify-between px-6 text-xs select-none z-30 shrink-0 ${device.os === 'ios' ? 'font-sans font-medium text-slate-800 dark:text-slate-100' : 'font-sans text-slate-700 dark:text-slate-300'}`,
             style: {
               height: `${device.statusBarHeight}px`,
               paddingTop: device.notchType === 'island' && !isLandscape ? '12px' : '0px'
@@ -190,11 +202,6 @@ export const DeviceFrame = ({
             })
           }), device.notchType === 'punch-hole' && isLandscape && /*#__PURE__*/_jsx("div", {
             className: "absolute left-3.5 top-1/2 -translate-y-1/2 bg-black w-3.5 h-3.5 rounded-full z-40"
-          }), device.notchType === 'home-button' && /*#__PURE__*/_jsx("div", {
-            className: "absolute top-0 left-0 right-0 h-[40px] bg-slate-900 dark:bg-slate-950 z-30 flex items-center justify-center",
-            children: /*#__PURE__*/_jsx("div", {
-              className: "w-16 h-1 bg-zinc-800 rounded-full"
-            })
           }), /*#__PURE__*/_jsxs("div", {
             className: "flex-1 w-full h-full relative bg-white dark:bg-black overflow-hidden",
             children: [iframeUrl ? /*#__PURE__*/_jsx("iframe", {
@@ -227,7 +234,7 @@ export const DeviceFrame = ({
               })]
             })]
           }), device.homeBarHeight > 0 && /*#__PURE__*/_jsx("div", {
-            className: "w-full flex items-center justify-center relative z-30 bg-transparent",
+            className: "w-full flex items-center justify-center relative z-30 bg-transparent shrink-0",
             style: {
               height: `${device.homeBarHeight}px`
             },
@@ -249,18 +256,18 @@ export const DeviceFrame = ({
                 className: "w-3 h-3 border-l-2 border-b-2 border-slate-500 dark:border-slate-400 rotate-45 transform translate-x-0.5"
               })]
             })
-          }), device.notchType === 'home-button' && /*#__PURE__*/_jsx("div", {
-            className: "absolute bottom-0 left-0 right-0 h-[50px] bg-slate-900 dark:bg-slate-950 z-30 flex items-center justify-center",
-            children: /*#__PURE__*/_jsx("button", {
-              onClick: reloadViewport,
-              className: "w-10 h-10 rounded-full border-[2.5px] border-zinc-700 dark:border-zinc-800 bg-transparent active:bg-zinc-800/50 flex items-center justify-center transition-all cursor-pointer",
-              title: "Hemknapp - L\xE4s om sidan",
-              children: /*#__PURE__*/_jsx("div", {
-                className: "w-3.5 h-3.5 rounded-sm border border-zinc-600/40"
-              })
-            })
           })]
-        })
+        }), isHomeButton && /*#__PURE__*/_jsx("div", {
+          className: "w-full h-[44px] shrink-0 bg-slate-900 dark:bg-slate-950 flex items-center justify-center select-none",
+          children: /*#__PURE__*/_jsx("button", {
+            onClick: reloadViewport,
+            className: "w-9 h-9 rounded-full border-[2px] border-zinc-700 dark:border-zinc-800 bg-transparent active:bg-zinc-800/50 flex items-center justify-center transition-all cursor-pointer",
+            title: "Hemknapp - L\xE4s om sidan",
+            children: /*#__PURE__*/_jsx("div", {
+              className: "w-3 h-3 rounded-sm border border-zinc-600/40"
+            })
+          })
+        })]
       })
     }), /*#__PURE__*/_jsxs("div", {
       className: "mt-4 flex gap-2 z-20",

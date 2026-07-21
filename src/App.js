@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { Smartphone, Tablet, RotateCw, Upload, Code, Sun, Moon, Share2, Search, Sparkles, X, Info, FileCode, Globe, History, Download, ExternalLink, Maximize2, Minimize2 } from 'lucide-react';
+import { Smartphone, Tablet, RotateCw, Upload, Code, Sun, Moon, Share2, Search, Sparkles, X, Info, ChevronLeft, ChevronRight, FileCode, Globe, History, Download, ExternalLink, Maximize2, Minimize2 } from 'lucide-react';
 import { DEVICES } from './devices.js';
 import { DEMO_PWAS } from './demoPWAs.js';
 import { PWAButton } from './components/PWAButton.js';
@@ -39,6 +39,10 @@ const DEFAULT_STARTER_HTML = `<!DOCTYPE html>
 </body>
 </html>`;
 const VERSION_HISTORY = [{
+  version: 'v0.9.01',
+  date: '2026-07-21',
+  changes: ['Uppdaterat applikationen till version 0.9.01.', 'Utökat enhetsbiblioteket med omfattande modeller för Apple iPhone/iPad och Samsung Galaxy (upp till 10 år gamla enheter).', 'Lagt till möjlighet att fälla undan hela vänsterpanelen med en expandera/kollapsa-knapp (pilknapp).']
+}, {
   version: 'v0.01.05',
   date: '2026-07-14',
   changes: ['Uppdaterat gränssnittet till Sleek Interface-tema med djupsvart mörkt läge.', 'Lagt till glassmorphism-kontroller och integrerat statusindikatorer i verktygsfältet.', 'Strömlinjeformat layout och färgkontraster för förbättrad visuell estetik.']
@@ -272,7 +276,7 @@ export default function App() {
               children: "PWA TESTER PRO"
             }), /*#__PURE__*/_jsx("span", {
               className: "text-[10px] text-slate-500 dark:text-slate-400 font-mono",
-              children: "vers 0.01.05"
+              children: "vers 0.9.01"
             })]
           }), /*#__PURE__*/_jsx("span", {
             className: "text-[11px] text-slate-400 dark:text-slate-500 font-medium",
@@ -359,12 +363,23 @@ export default function App() {
         children: [/*#__PURE__*/_jsxs("div", {
           className: "bg-white/80 dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800 rounded-3xl p-4.5 shadow-xs space-y-4",
           children: [/*#__PURE__*/_jsxs("div", {
-            children: [/*#__PURE__*/_jsx("h2", {
-              className: "text-xs font-black uppercase tracking-wider text-slate-400 dark:text-slate-500",
-              children: "1. V\xE4lj PWA-k\xE4lla"
-            }), /*#__PURE__*/_jsx("p", {
-              className: "text-[11px] text-slate-500 dark:text-slate-400 mt-0.5",
-              children: "V\xE4lj vad du vill k\xF6ra i de simulerade enheterna"
+            className: "flex items-center justify-between gap-2",
+            children: [/*#__PURE__*/_jsxs("div", {
+              children: [/*#__PURE__*/_jsx("h2", {
+                className: "text-xs font-black uppercase tracking-wider text-slate-400 dark:text-slate-500",
+                children: "1. V\xE4lj PWA-k\xE4lla"
+              }), /*#__PURE__*/_jsx("p", {
+                className: "text-[11px] text-slate-500 dark:text-slate-400 mt-0.5",
+                children: "V\xE4lj vad du vill k\xF6ra i de simulerade enheterna"
+              })]
+            }), /*#__PURE__*/_jsx("button", {
+              onClick: () => setIsSidebarCollapsed(true),
+              className: "flex items-center justify-center p-1.5 rounded-xl bg-slate-100 dark:bg-slate-800/80 hover:bg-indigo-50 dark:hover:bg-indigo-950/60 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 border border-slate-200/80 dark:border-slate-700/80 transition-all cursor-pointer pwa-button shrink-0",
+              title: "F\xE4ll undan v\xE4nsterpanelen (Skjut till v\xE4nster)",
+              "aria-label": "F\xE4ll undan v\xE4nsterpanelen",
+              children: /*#__PURE__*/_jsx(ChevronLeft, {
+                className: "w-4 h-4 stroke-[2.5]"
+              })
             })]
           }), /*#__PURE__*/_jsxs("div", {
             className: `grid ${sidebarWidth < 385 ? 'grid-cols-2' : 'grid-cols-4'} gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl`,
@@ -718,6 +733,17 @@ export default function App() {
               })]
             })]
           })]
+        })]
+      }), isSidebarCollapsed && /*#__PURE__*/_jsxs("button", {
+        onClick: () => setIsSidebarCollapsed(false),
+        className: "flex items-center gap-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500/80 text-indigo-600 dark:text-indigo-400 shadow-sm px-3.5 py-3 rounded-2xl transition-all cursor-pointer shrink-0 self-start hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30 pwa-button group",
+        title: "Visa v\xE4nsterpanel (Skjut ut f\xE4ltet)",
+        "aria-label": "Visa v\xE4nsterpanel",
+        children: [/*#__PURE__*/_jsx(ChevronRight, {
+          className: "w-5 h-5 text-indigo-600 dark:text-indigo-400 stroke-[2.5] group-hover:translate-x-0.5 transition-transform"
+        }), /*#__PURE__*/_jsx("span", {
+          className: "text-xs font-bold text-slate-800 dark:text-slate-100",
+          children: "Visa paneler"
         })]
       }), isLargeScreen && !isSidebarCollapsed && /*#__PURE__*/_jsx("div", {
         onMouseDown: startResizing,

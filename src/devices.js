@@ -4,10 +4,38 @@
  */
 
 export const DEVICES = [
-// iOS Phones
+// ==========================================
+// --- Apple iPhones (Aktuella till 10 år gamla) ---
+// ==========================================
 {
-  id: 'iphone-14-pro',
-  name: 'iPhone 14 Pro',
+  id: 'iphone-16-pro-max',
+  name: 'iPhone 16 Pro Max',
+  brand: 'Apple',
+  width: 430,
+  height: 932,
+  type: 'phone',
+  os: 'ios',
+  notchType: 'island',
+  bezelSize: 10,
+  borderRadius: 'rounded-[54px]',
+  statusBarHeight: 44,
+  homeBarHeight: 18
+}, {
+  id: 'iphone-16-pro',
+  name: 'iPhone 16 Pro',
+  brand: 'Apple',
+  width: 402,
+  height: 874,
+  type: 'phone',
+  os: 'ios',
+  notchType: 'island',
+  bezelSize: 10,
+  borderRadius: 'rounded-[52px]',
+  statusBarHeight: 44,
+  homeBarHeight: 18
+}, {
+  id: 'iphone-15-16',
+  name: 'iPhone 15 / 16',
   brand: 'Apple',
   width: 393,
   height: 852,
@@ -19,8 +47,8 @@ export const DEVICES = [
   statusBarHeight: 44,
   homeBarHeight: 18
 }, {
-  id: 'iphone-14-pro-max',
-  name: 'iPhone 14 Pro Max',
+  id: 'iphone-15-pro-max',
+  name: 'iPhone 15 Pro Max',
   brand: 'Apple',
   width: 430,
   height: 932,
@@ -45,31 +73,136 @@ export const DEVICES = [
   statusBarHeight: 40,
   homeBarHeight: 18
 }, {
-  id: 'iphone-se',
-  name: 'iPhone SE (Retro)',
+  id: 'iphone-12-12pro',
+  name: 'iPhone 12 / 12 Pro',
+  brand: 'Apple',
+  width: 390,
+  height: 844,
+  type: 'phone',
+  os: 'ios',
+  notchType: 'notch',
+  bezelSize: 14,
+  borderRadius: 'rounded-[44px]',
+  statusBarHeight: 40,
+  homeBarHeight: 18
+}, {
+  id: 'iphone-12-mini',
+  name: 'iPhone 12 / 13 Mini',
+  brand: 'Apple',
+  width: 360,
+  height: 780,
+  type: 'phone',
+  os: 'ios',
+  notchType: 'notch',
+  bezelSize: 12,
+  borderRadius: 'rounded-[40px]',
+  statusBarHeight: 40,
+  homeBarHeight: 18
+}, {
+  id: 'iphone-11-xr',
+  name: 'iPhone 11 / XR',
+  brand: 'Apple',
+  width: 414,
+  height: 896,
+  type: 'phone',
+  os: 'ios',
+  notchType: 'notch',
+  bezelSize: 16,
+  borderRadius: 'rounded-[42px]',
+  statusBarHeight: 40,
+  homeBarHeight: 18
+}, {
+  id: 'iphone-x-xs',
+  name: 'iPhone X / XS / 11 Pro',
+  brand: 'Apple',
+  width: 375,
+  height: 812,
+  type: 'phone',
+  os: 'ios',
+  notchType: 'notch',
+  bezelSize: 14,
+  borderRadius: 'rounded-[40px]',
+  statusBarHeight: 40,
+  homeBarHeight: 18
+}, {
+  id: 'iphone-se-gen2',
+  name: 'iPhone SE (Gen 2 / Gen 3)',
   brand: 'Apple',
   width: 375,
   height: 667,
   type: 'phone',
   os: 'ios',
   notchType: 'home-button',
-  bezelSize: 24,
-  // thicker bezels on top and bottom
-  borderRadius: 'rounded-[20px]',
+  bezelSize: 14,
+  borderRadius: 'rounded-[28px]',
   statusBarHeight: 20,
-  homeBarHeight: 0 // uses physical home button
+  homeBarHeight: 0
+}, {
+  id: 'iphone-8-7-6s',
+  name: 'iPhone 8 / 7 / 6s (4.7")',
+  brand: 'Apple',
+  width: 375,
+  height: 667,
+  type: 'phone',
+  os: 'ios',
+  notchType: 'home-button',
+  bezelSize: 14,
+  borderRadius: 'rounded-[28px]',
+  statusBarHeight: 20,
+  homeBarHeight: 0
+}, {
+  id: 'iphone-8-plus',
+  name: 'iPhone 8 Plus / 7 Plus (5.5")',
+  brand: 'Apple',
+  width: 414,
+  height: 736,
+  type: 'phone',
+  os: 'ios',
+  notchType: 'home-button',
+  bezelSize: 16,
+  borderRadius: 'rounded-[30px]',
+  statusBarHeight: 20,
+  homeBarHeight: 0
+}, {
+  id: 'iphone-se-retro',
+  name: 'iPhone SE 1st Gen / 5s (2016)',
+  brand: 'Apple',
+  width: 320,
+  height: 568,
+  type: 'phone',
+  os: 'ios',
+  notchType: 'home-button',
+  bezelSize: 16,
+  borderRadius: 'rounded-[24px]',
+  statusBarHeight: 20,
+  homeBarHeight: 0
 },
-// Android Phones
+// ==========================================
+// --- Samsung Galaxy Phones (Aktuella till 10 år gamla) ---
+// ==========================================
 {
-  id: 'galaxy-s23',
-  name: 'Galaxy S23',
+  id: 'galaxy-s24-ultra',
+  name: 'Galaxy S24 Ultra',
   brand: 'Samsung',
-  width: 360,
-  height: 800,
+  width: 412,
+  height: 915,
   type: 'phone',
   os: 'android',
   notchType: 'punch-hole',
-  bezelSize: 10,
+  bezelSize: 8,
+  borderRadius: 'rounded-[20px]',
+  statusBarHeight: 28,
+  homeBarHeight: 16
+}, {
+  id: 'galaxy-s24',
+  name: 'Galaxy S24 / S24+',
+  brand: 'Samsung',
+  width: 384,
+  height: 854,
+  type: 'phone',
+  os: 'android',
+  notchType: 'punch-hole',
+  bezelSize: 9,
   borderRadius: 'rounded-[32px]',
   statusBarHeight: 28,
   homeBarHeight: 16
@@ -84,12 +217,119 @@ export const DEVICES = [
   notchType: 'punch-hole',
   bezelSize: 8,
   borderRadius: 'rounded-[16px]',
-  // sharp rectangular corners
   statusBarHeight: 28,
   homeBarHeight: 16
 }, {
+  id: 'galaxy-s23',
+  name: 'Galaxy S23 / S22',
+  brand: 'Samsung',
+  width: 360,
+  height: 800,
+  type: 'phone',
+  os: 'android',
+  notchType: 'punch-hole',
+  bezelSize: 10,
+  borderRadius: 'rounded-[32px]',
+  statusBarHeight: 28,
+  homeBarHeight: 16
+}, {
+  id: 'galaxy-z-fold',
+  name: 'Galaxy Z Fold 5 / 6 (Uppfälld)',
+  brand: 'Samsung',
+  width: 768,
+  height: 960,
+  type: 'phone',
+  os: 'android',
+  notchType: 'punch-hole',
+  bezelSize: 10,
+  borderRadius: 'rounded-[24px]',
+  statusBarHeight: 28,
+  homeBarHeight: 16
+}, {
+  id: 'galaxy-z-flip',
+  name: 'Galaxy Z Flip 5 / 6 (Vikbar)',
+  brand: 'Samsung',
+  width: 360,
+  height: 880,
+  type: 'phone',
+  os: 'android',
+  notchType: 'punch-hole',
+  bezelSize: 10,
+  borderRadius: 'rounded-[30px]',
+  statusBarHeight: 28,
+  homeBarHeight: 16
+}, {
+  id: 'galaxy-a54-a55',
+  name: 'Galaxy A54 / A55 (Mellanklass)',
+  brand: 'Samsung',
+  width: 360,
+  height: 800,
+  type: 'phone',
+  os: 'android',
+  notchType: 'punch-hole',
+  bezelSize: 12,
+  borderRadius: 'rounded-[30px]',
+  statusBarHeight: 28,
+  homeBarHeight: 16
+}, {
+  id: 'galaxy-s21-s20',
+  name: 'Galaxy S21 / S20',
+  brand: 'Samsung',
+  width: 360,
+  height: 800,
+  type: 'phone',
+  os: 'android',
+  notchType: 'punch-hole',
+  bezelSize: 10,
+  borderRadius: 'rounded-[32px]',
+  statusBarHeight: 28,
+  homeBarHeight: 16
+}, {
+  id: 'galaxy-s10',
+  name: 'Galaxy S10 / S10+ (2019)',
+  brand: 'Samsung',
+  width: 360,
+  height: 760,
+  type: 'phone',
+  os: 'android',
+  notchType: 'punch-hole',
+  bezelSize: 10,
+  borderRadius: 'rounded-[28px]',
+  statusBarHeight: 28,
+  homeBarHeight: 16
+}, {
+  id: 'galaxy-s9-s8',
+  name: 'Galaxy S9 / S8 (2017-2018)',
+  brand: 'Samsung',
+  width: 360,
+  height: 740,
+  type: 'phone',
+  os: 'android',
+  notchType: 'none',
+  bezelSize: 14,
+  borderRadius: 'rounded-[26px]',
+  statusBarHeight: 24,
+  homeBarHeight: 16
+}, {
+  id: 'galaxy-s7-edge',
+  name: 'Galaxy S7 / S7 Edge (2016)',
+  brand: 'Samsung',
+  width: 360,
+  height: 640,
+  type: 'phone',
+  os: 'android',
+  notchType: 'none',
+  bezelSize: 16,
+  borderRadius: 'rounded-[22px]',
+  statusBarHeight: 24,
+  homeBarHeight: 16
+},
+// ==========================================
+// --- Övriga Android Telefoner ---
+// ==========================================
+{
   id: 'pixel-7-pro',
-  name: 'Pixel 7 Pro',
+  name: 'Pixel 7 Pro / 8 Pro',
   brand: 'Google',
   width: 412,
   height: 892,
@@ -102,7 +342,7 @@ export const DEVICES = [
   homeBarHeight: 16
 }, {
   id: 'oneplus-11',
-  name: 'OnePlus 11',
+  name: 'OnePlus 11 / 12',
   brand: 'OnePlus',
   width: 392,
   height: 851,
@@ -114,18 +354,20 @@ export const DEVICES = [
   statusBarHeight: 28,
   homeBarHeight: 16
 },
-// iOS Tablets
+// ==========================================
+// --- Apple iPads (Aktuella till 10 år gamla) ---
+// ==========================================
 {
-  id: 'ipad-air-5',
-  name: 'iPad Air 5',
+  id: 'ipad-pro-13',
+  name: 'iPad Pro 13" (M4)',
   brand: 'Apple',
-  width: 820,
-  height: 1180,
+  width: 1032,
+  height: 1376,
   type: 'tablet',
   os: 'ios',
   notchType: 'none',
-  bezelSize: 18,
-  borderRadius: 'rounded-[24px]',
+  bezelSize: 16,
+  borderRadius: 'rounded-[28px]',
   statusBarHeight: 24,
   homeBarHeight: 14
 }, {
@@ -142,8 +384,112 @@ export const DEVICES = [
   statusBarHeight: 24,
   homeBarHeight: 14
 }, {
+  id: 'ipad-pro-11',
+  name: 'iPad Pro 11" / Air 11"',
+  brand: 'Apple',
+  width: 834,
+  height: 1194,
+  type: 'tablet',
+  os: 'ios',
+  notchType: 'none',
+  bezelSize: 18,
+  borderRadius: 'rounded-[24px]',
+  statusBarHeight: 24,
+  homeBarHeight: 14
+}, {
+  id: 'ipad-air-5',
+  name: 'iPad Air 5 / M2 (10.9")',
+  brand: 'Apple',
+  width: 820,
+  height: 1180,
+  type: 'tablet',
+  os: 'ios',
+  notchType: 'none',
+  bezelSize: 18,
+  borderRadius: 'rounded-[24px]',
+  statusBarHeight: 24,
+  homeBarHeight: 14
+}, {
+  id: 'ipad-gen-10',
+  name: 'iPad Gen 10 (10.9")',
+  brand: 'Apple',
+  width: 820,
+  height: 1180,
+  type: 'tablet',
+  os: 'ios',
+  notchType: 'none',
+  bezelSize: 18,
+  borderRadius: 'rounded-[24px]',
+  statusBarHeight: 24,
+  homeBarHeight: 14
+}, {
+  id: 'ipad-gen-9',
+  name: 'iPad Gen 9 (10.2")',
+  brand: 'Apple',
+  width: 810,
+  height: 1080,
+  type: 'tablet',
+  os: 'ios',
+  notchType: 'home-button',
+  bezelSize: 16,
+  borderRadius: 'rounded-[22px]',
+  statusBarHeight: 20,
+  homeBarHeight: 0
+}, {
+  id: 'ipad-gen-7-8',
+  name: 'iPad Gen 7 / 8 (10.2")',
+  brand: 'Apple',
+  width: 810,
+  height: 1080,
+  type: 'tablet',
+  os: 'ios',
+  notchType: 'home-button',
+  bezelSize: 16,
+  borderRadius: 'rounded-[22px]',
+  statusBarHeight: 20,
+  homeBarHeight: 0
+}, {
+  id: 'ipad-air-3',
+  name: 'iPad Air 3 / Pro 10.5" (2017-2019)',
+  brand: 'Apple',
+  width: 834,
+  height: 1112,
+  type: 'tablet',
+  os: 'ios',
+  notchType: 'home-button',
+  bezelSize: 16,
+  borderRadius: 'rounded-[22px]',
+  statusBarHeight: 20,
+  homeBarHeight: 0
+}, {
+  id: 'ipad-air-2',
+  name: 'iPad Air 2 (9.7")',
+  brand: 'Apple',
+  width: 768,
+  height: 1024,
+  type: 'tablet',
+  os: 'ios',
+  notchType: 'home-button',
+  bezelSize: 16,
+  borderRadius: 'rounded-[20px]',
+  statusBarHeight: 20,
+  homeBarHeight: 0
+}, {
+  id: 'ipad-gen-5-6',
+  name: 'iPad Gen 5 / 6 (9.7" 2017-2018)',
+  brand: 'Apple',
+  width: 768,
+  height: 1024,
+  type: 'tablet',
+  os: 'ios',
+  notchType: 'home-button',
+  bezelSize: 16,
+  borderRadius: 'rounded-[20px]',
+  statusBarHeight: 20,
+  homeBarHeight: 0
+}, {
   id: 'ipad-mini-6',
-  name: 'iPad Mini 6',
+  name: 'iPad Mini 6 / 7',
   brand: 'Apple',
   width: 744,
   height: 1133,
@@ -154,11 +500,39 @@ export const DEVICES = [
   borderRadius: 'rounded-[22px]',
   statusBarHeight: 24,
   homeBarHeight: 14
+}, {
+  id: 'ipad-mini-4',
+  name: 'iPad Mini 4 / 5 (Classic 7.9")',
+  brand: 'Apple',
+  width: 768,
+  height: 1024,
+  type: 'tablet',
+  os: 'ios',
+  notchType: 'home-button',
+  bezelSize: 16,
+  borderRadius: 'rounded-[20px]',
+  statusBarHeight: 20,
+  homeBarHeight: 0
 },
-// Android Tablets
+// ==========================================
+// --- Samsung & Android Tablets ---
+// ==========================================
 {
+  id: 'galaxy-tab-s9-ultra',
+  name: 'Galaxy Tab S9 Ultra (14.6")',
+  brand: 'Samsung',
+  width: 960,
+  height: 1440,
+  type: 'tablet',
+  os: 'android',
+  notchType: 'none',
+  bezelSize: 14,
+  borderRadius: 'rounded-[28px]',
+  statusBarHeight: 24,
+  homeBarHeight: 14
+}, {
   id: 'galaxy-tab-s9',
-  name: 'Galaxy Tab S9',
+  name: 'Galaxy Tab S9 / S8 (11")',
   brand: 'Samsung',
   width: 800,
   height: 1280,
@@ -167,6 +541,32 @@ export const DEVICES = [
   notchType: 'none',
   bezelSize: 16,
   borderRadius: 'rounded-[24px]',
+  statusBarHeight: 24,
+  homeBarHeight: 14
+}, {
+  id: 'galaxy-tab-a9',
+  name: 'Galaxy Tab A9+ / A8 (10.5")',
+  brand: 'Samsung',
+  width: 800,
+  height: 1200,
+  type: 'tablet',
+  os: 'android',
+  notchType: 'none',
+  bezelSize: 16,
+  borderRadius: 'rounded-[22px]',
+  statusBarHeight: 24,
+  homeBarHeight: 14
+}, {
+  id: 'galaxy-tab-a-classic',
+  name: 'Galaxy Tab A 10.1" (2016-2019)',
+  brand: 'Samsung',
+  width: 800,
+  height: 1280,
+  type: 'tablet',
+  os: 'android',
+  notchType: 'none',
+  bezelSize: 20,
+  borderRadius: 'rounded-[20px]',
   statusBarHeight: 24,
   homeBarHeight: 14
 }, {
